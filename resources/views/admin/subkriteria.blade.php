@@ -23,12 +23,12 @@
             <div class="card-header bg-success text-white">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h3> Kriteria</h3>
+                        <h3>Kriteria</h3>
                     </div>
                     <div class="col-sm-6 text-right">
-                        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#tambahDataModal" style="color: #20c997;">
+                        <!-- <button type="button" class="btn btn-light" data-toggle="modal" data-target="#tambahDataModal" style="color: #20c997;">
                             <i class="fas fa-plus"></i> Tambah Data
-                        </button>
+                        </button> -->
                     </div>
                 </div>
             </div>
@@ -52,17 +52,17 @@
                                 <td>{{ $c->name }}</td>
                                 <td class="text-center">{{ $c->attribute }}</td>
                                 <td class="text-center">{{ $c->bobot }}</td>
-                                <td>
-                                    <div class="btn-group" role="group">
+                                <td class="text-center">
+                                    <div class="btn-group">
                                         <button type="button" class="btn btn-warning mr-2" data-toggle="modal" data-target="#editDataModal{{ $c->id }}">
                                             <i class="fas fa-edit"></i> Edit
                                         </button>
                                         <form action="{{ route('admin.subkriteria.destroy', $c->id) }}" method="POST" style="display: inline-block;">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-danger">
+                                            <!-- <button type="submit" class="btn btn-danger">
                                                 <i class="fas fa-trash-alt"></i> Hapus
-                                            </button>
+                                            </button> -->
                                         </form>
                                     </div>
                                 </td>

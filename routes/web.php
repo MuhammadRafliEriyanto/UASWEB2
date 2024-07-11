@@ -59,6 +59,8 @@ Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/register', [LoginController::class, 'register'])->name('register');
 Route::post('/register-proses', [LoginController::class, 'register_proses'])->name('register-proses');
 
+Route::get('/email/verify/{id}', [LoginController::class, 'verifyEmail'])->name('verification.verify');
+
 Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin/dashboard', function () {
         return view('admin.dashboard'); // Buat view ini sesuai kebutuhan Anda
